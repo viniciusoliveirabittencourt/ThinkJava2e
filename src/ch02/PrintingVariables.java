@@ -14,6 +14,6 @@ public class PrintingVariables {
         System.out.print(":");
         System.out.print(minute);
         System.out.println(".");
-        // in some computers the prints will only appear together with a println, so never forget a println at end of a output block
+        // in some computers the prints will only appear together with a println, so never forget a println at end of an output block
     }
 }
