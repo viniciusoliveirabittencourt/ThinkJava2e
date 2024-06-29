@@ -2,7 +2,7 @@ package ch01;
 
 // in java, we need to have some mandatory spaces, so, the command publicclassGoodbye will never work
 public class Goodbye {
-    public static void main(String[] args) {
+    public static void mian(String[] args) {
         // because I use print, the phrase don't break at end of line
         System.out.print("Goodbye, ");
         System.out.println("cruel world!");
