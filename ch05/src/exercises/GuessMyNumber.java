@@ -3,12 +3,29 @@ package exercises;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * A game where the user has to guess the random number.
+ * <p>
+ * The game will generate a random number, which the user
+ * will have 3 chances to guess while the game gives tips on
+ * how far away the user is, which can be from more to less.
+ */
 public class GuessMyNumber {
+    /**
+     * Generate random number.
+     * @return the random number - int
+     */
     public static int randomNumber() {
         Random random = new Random();
         return random.nextInt(100) + 1; // Range 1 to 100
     }
 
+    /**
+     * Verify the input user to see if are a number.
+     * Case is not a number, will finish the program.
+     * Case is a different type from integer, will transform the number in integer.
+     * @return Return the input user in integer value - int
+     */
     public static int verifyInput() {
         Scanner sc = new Scanner(System.in);
 
@@ -21,6 +38,14 @@ public class GuessMyNumber {
         return (int) sc.nextDouble();
     }
 
+    /**
+     * Checks if the user got the number right.
+     * If got, it will congratulate and will return a true to close the program.
+     * If not, it will show the attempted number and how far are from the right one.
+     * @param userGuess The user number guess - int
+     * @param realNumber The real number - int
+     * @return true - false
+     */
     public static boolean verifyGuess(int userGuess, int realNumber) {
         if (userGuess == realNumber) {
             System.out.println("Congrats, you guess the number!");
@@ -46,6 +71,7 @@ public class GuessMyNumber {
         System.out.print("Type a number: ");
         userGuess = verifyInput();
 
+        // Give the three chances and verify if the result is equal. If is, close the program.
         if (verifyGuess(userGuess, realNumber)) {
             return;
         } else {
