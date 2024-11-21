@@ -29,14 +29,14 @@ public class SquareRoot {
         Scanner sc = new Scanner(System.in);
 
         if (!sc.hasNextDouble()) {
-            System.out.println("Only positive integers are accepted.");
+            System.out.println("Only positive numbers are accepted.");
             System.exit(1);
         }
 
         inputUser = sc.nextDouble();
 
         if (inputUser <= 0) {
-            System.out.println("Only positive integers are accepted.");
+            System.out.println("Only positive numbers are accepted.");
             System.exit(1);
         }
 
