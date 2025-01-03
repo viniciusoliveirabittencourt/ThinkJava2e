@@ -29,11 +29,12 @@ public class Anagram {
     }
 
     public static boolean anotherAnagram(String phrase1, String phrase2) {
-        phrase1 = phrase1.replace(" ", "");
-        phrase2 = phrase2.replace(" ", "");
-
         for (int i = 0; i < phrase1.length(); i++) {
             char charPh1 = phrase1.charAt(i);
+            if (charPh1 == ' ') {
+                continue;
+            }
+
             int indexPh2 = phrase2.indexOf(charPh1);
 
             if (indexPh2 == -1) {
@@ -43,7 +44,7 @@ public class Anagram {
             phrase2 = phrase2.substring(0, indexPh2) + phrase2.substring(indexPh2 + 1);
         }
 
-        return phrase2.isEmpty();
+        return phrase2.isBlank();
     }
 
     public static void main(String[] args) {
